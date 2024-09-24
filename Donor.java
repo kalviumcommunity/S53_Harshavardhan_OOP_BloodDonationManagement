@@ -3,11 +3,11 @@ import java.util.List;
 
 public class Donor {
     private String name;
-    private String bloodType;
+    private BloodType bloodType;
     private String contactInfo;
     private ArrayList<Donation> donations;
 
-    public Donor(String name, String bloodType, String contactInfo) {
+    public Donor(String name, BloodType bloodType, String contactInfo) {
         this.name = name;
         this.bloodType = bloodType;
         this.contactInfo = contactInfo;
@@ -19,7 +19,7 @@ public class Donor {
         return name;
     }
 
-    public String getBloodType() {
+    public BloodType getBloodType() {
         return bloodType;
     }
 
