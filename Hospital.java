@@ -32,10 +32,15 @@ public class Hospital {
 
     public ArrayList<BloodRequest> getBloodRequests() {
         return bloodRequests;
+    }
+
+    public static void increamentTotalDonations(){
         totalBloodRequests++;
     }
 
     public void addBloodRequest(BloodRequest bloodRequest) {
         bloodRequests.add(bloodRequest);
+        increamentTotalDonations();
+
     }
 }
