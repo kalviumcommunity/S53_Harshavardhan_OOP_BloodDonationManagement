@@ -5,7 +5,8 @@ public class Hospital {
     private String location;
     private String contactInfo;
     private ArrayList<BloodRequest> bloodRequests;
-
+    private static int totalBloodRequests = 0;
+    
     public Hospital(String name, String location, String contactInfo) {
         this.name = name;
         this.location = location;
@@ -25,11 +26,21 @@ public class Hospital {
         return contactInfo;
     }
 
+    public int totalBloodRequests(){
+        return totalBloodRequests;
+    }
+
     public ArrayList<BloodRequest> getBloodRequests() {
         return bloodRequests;
     }
 
+    public static void increamentTotalDonations(){
+        totalBloodRequests++;
+    }
+
     public void addBloodRequest(BloodRequest bloodRequest) {
         bloodRequests.add(bloodRequest);
+        increamentTotalDonations();
+
     }
 }

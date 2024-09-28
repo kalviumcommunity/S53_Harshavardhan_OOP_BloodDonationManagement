@@ -21,7 +21,7 @@ public class Main {
 
         
         System.out.println("Hospital Name: " + hospital.getName());
-
+        
         // Simulate a donation
         // donor.donateBlood(BloodType.A_POSITIVE, 2);
         // hospital.receiveBlood(BloodType.A_POSITIVE, 2);
