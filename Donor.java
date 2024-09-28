@@ -6,12 +6,13 @@ public class Donor {
     private BloodType bloodType;
     private String contactInfo;
     private ArrayList<Donation> donations;
+    private static int totalDonations = 0;
+    
 
     public Donor(String name, BloodType bloodType, String contactInfo) {
         this.name = name;
         this.bloodType = bloodType;
         this.contactInfo = contactInfo;
-        this.donations = new ArrayList<>();
         this.donations = new ArrayList<>();
     }
 
@@ -31,8 +32,13 @@ public class Donor {
         return donations;
     }
 
+    public int getTotalDonations(){
+        return totalDonations;
+    }
+
     public void addDonation(Donation donation) {
         donations.add(donation);
+        totalDonations++;
     }
 }
 

@@ -1,7 +1,4 @@
 
-
-
-
 public class BloodRequest {
     private Hospital hospital;
     private BloodType bloodType;
