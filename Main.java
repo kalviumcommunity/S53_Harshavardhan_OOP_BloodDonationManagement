@@ -16,11 +16,16 @@ public class Main {
             System.out.println("Name: " + donor.getName());
             System.out.println("Blood Type: " + donor.getBloodType());
             System.out.println("Contact Info: " + donor.getContactInfo());
+            System.out.println(donor.getTotalDonations());
             System.out.println();
         }
 
         
         System.out.println("Hospital Name: " + hospital.getName());
+        BloodRequest request = new BloodRequest(hospital, BloodType.A_POSITIVE , 2);
+        hospital.addBloodRequest(request);
+        System.out.println(hospital.totalBloodRequests());
+
         
         // Simulate a donation
         // donor.donateBlood(BloodType.A_POSITIVE, 2);

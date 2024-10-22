@@ -26,6 +26,11 @@ public class Hospital {
         return contactInfo;
     }
 
+    // New setter method for contactInfo
+    public void setContactInfo(String contactInfo) {
+        this.contactInfo = contactInfo;
+    }
+
     public int totalBloodRequests(){
         return totalBloodRequests;
     }
@@ -41,6 +46,5 @@ public class Hospital {
     public void addBloodRequest(BloodRequest bloodRequest) {
         bloodRequests.add(bloodRequest);
         increamentTotalDonations();
-
     }
 }
