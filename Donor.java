@@ -35,6 +35,11 @@ public class Donor {
     public int getTotalDonations(){
         return totalDonations;
     }
+    // New setter method for contactInfo
+    public void setContactInfo(String contactInfo) {
+        this.contactInfo = contactInfo;
+    }
+
 
     public void addDonation(Donation donation) {
         donations.add(donation);
