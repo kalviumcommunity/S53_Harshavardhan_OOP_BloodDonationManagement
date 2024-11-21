@@ -1,23 +1,25 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Donor {
-    private String name;
+public class Donor extends Person{
     private BloodType bloodType;
-    private String contactInfo;
     private ArrayList<Donation> donations;
     private static int totalDonations = 0;
     
 
     public Donor(String name, BloodType bloodType, String contactInfo) {
-        this.name = name;
+        super(name, contactInfo);
         this.bloodType = bloodType;
-        this.contactInfo = contactInfo;
         this.donations = new ArrayList<>();
     }
 
+    @Override
+    public String getDetails() {
+        return "Donor: " + super.getName() + ", Blood Type: " + bloodType;
+    }
+
     public String getName() {
-        return name;
+        return super.getName();
     }
 
     public BloodType getBloodType() {
@@ -25,7 +27,7 @@ public class Donor {
     }
 
     public String getContactInfo() {
-        return contactInfo;
+        return super.getContactInfo();
     }
 
     public List<Donation> getDonations() {
@@ -37,7 +39,7 @@ public class Donor {
     }
     // New setter method for contactInfo
     public void setContactInfo(String contactInfo) {
-        this.contactInfo = contactInfo;
+        super.setContactInfo(contactInfo);
     }
 
 
