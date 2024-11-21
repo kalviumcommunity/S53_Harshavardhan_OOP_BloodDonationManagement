@@ -7,8 +7,7 @@ public class Main {
         List<Donor> donors = new ArrayList<>();
         Hospital hospital = new Hospital("City Hospital", "123 Main Street", "555-1234");
 
-        
-        
+
         donors.add(new Donor("John Doe",BloodType.A_POSITIVE, "1234567890"));
         donors.add(new Donor("Jane Smith", BloodType.B_NEGATIVE, "9876543210"));
 
@@ -17,7 +16,9 @@ public class Main {
             System.out.println("Blood Type: " + donor.getBloodType());
             System.out.println("Contact Info: " + donor.getContactInfo());
             System.out.println(donor.getTotalDonations());
-            System.out.println();
+            System.out.println("VS");
+
+            donor.getDetails();
         }
 
         
@@ -25,6 +26,7 @@ public class Main {
         BloodRequest request = new BloodRequest(hospital, BloodType.A_POSITIVE , 2);
         hospital.addBloodRequest(request);
         System.out.println(hospital.totalBloodRequests());
+
 
         
         // Simulate a donation
